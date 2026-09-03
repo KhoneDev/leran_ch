@@ -1,0 +1,12 @@
+# Package Managers
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+bun.lock
+bun.lockb
+
+# Miscellaneous
+/static/
+
+# Generated vocab data (one big line, produced by scripts/build-vocab.mjs)
+src/lib/data/vocab.ts

@@ -1,0 +1,71 @@
+@import 'tailwindcss';
+
+/* ---------- pinned search bar ---------- */
+/* The site header (var --hdr-h) and the pinned search bar (var --search-h)
+   are sticky; keep the table header row stuck just below both of them. */
+#view-table thead th {
+	top: calc(var(--hdr-h, 0px) + var(--search-h, 0px));
+}
+
+/* ---------- view switching ---------- */
+.view {
+	display: none;
+}
+.view.active {
+	display: block;
+}
+
+/* ---------- tab + level-chip active states ---------- */
+nav.tabs button.active,
+#drawer-nav button.active {
+	background-color: var(--color-amber-400);
+	color: var(--color-red-900);
+	font-weight: 600;
+}
+#level-nav button.selected,
+#level-nav-drawer button.selected {
+	background-color: var(--color-amber-400);
+	color: var(--color-red-900);
+	font-weight: 700;
+	border-color: var(--color-amber-400);
+}
+#quiz-setup .qcount button.selected {
+	border-color: var(--color-red-700);
+	background-color: #fdf3e7;
+	color: var(--color-red-800);
+	font-weight: 600;
+}
+
+/* ---------- quiz option states ---------- */
+#quiz-options button.correct {
+	border-color: #27ae60;
+	background-color: #eafaf1;
+}
+#quiz-options button.wrong {
+	border-color: #e74c3c;
+	background-color: #fdedec;
+}
+
+/* ---------- flashcard 3D flip ---------- */
+.card3d {
+	perspective: 1200px;
+}
+.card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transition: transform 0.5s;
+	transform-style: preserve-3d;
+}
+.card3d.flipped .card-inner {
+	transform: rotateY(180deg);
+}
+.card-face {
+	position: absolute;
+	inset: 0;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+.card-back {
+	transform: rotateY(180deg);
+}
