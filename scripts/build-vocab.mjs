@@ -1,4 +1,4 @@
-// Merges data/hsk1-6.json -> static/vocab.json + Fuse.js search index
+// Merges data/hsk1-6.json -> static/vocab.json + Fuse.js search index + static/data/hsk{1-6}.json
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -6,9 +6,13 @@ import Fuse from 'fuse.js';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const dataDir = path.join(here, '..', 'data');
-const outFile = path.join(here, '..', 'static', 'vocab.json');
+const staticDir = path.join(here, '..', 'static');
+const outFile = path.join(staticDir, 'vocab.json');
+const staticDataDir = path.join(staticDir, 'data');
 
 const LEVELS = [1, 2, 3, 4, 5, 6];
+
+fs.mkdirSync(staticDataDir, { recursive: true });
 
 const all = [];
 for (const level of LEVELS) {
@@ -20,6 +24,9 @@ for (const level of LEVELS) {
 	const rows = JSON.parse(fs.readFileSync(file, 'utf8'));
 	console.log(`HSK ${level}: ${rows.length} words`);
 	all.push(...rows);
+
+	// Also make individual levels available statically for fast lazy loading
+	fs.copyFileSync(file, path.join(staticDataDir, `hsk${level}.json`));
 }
 
 fs.mkdirSync(path.dirname(outFile), { recursive: true });

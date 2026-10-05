@@ -100,16 +100,6 @@ function cellValue(body) {
 	return v ?? '';
 }
 const colIndex = (L) => L.split('').reduce((a, ch) => a * 26 + (ch.charCodeAt(0) - 64), 0);
-const colName = (i) => {
-	// i is 1-based
-	let s = '';
-	while (i > 0) {
-		const m = (i - 1) % 26;
-		s = String.fromCharCode(65 + m) + s;
-		i = Math.floor((i - 1) / 26);
-	}
-	return s;
-};
 
 function sheetRows(xmlStr) {
 	const sd = /<sheetData>([\s\S]*?)<\/sheetData>/.exec(xmlStr)?.[1] ?? '';
@@ -155,10 +145,7 @@ for (let level = 1; level <= 6; level++) {
 		const example = isLevel6 ? '' : (r[4] ?? '').trim();
 		return [no, word, pinyin, meaning, example];
 	});
-	const csv =
-		HEADER.join(',') +
-		'\n' +
-		lines.map((r) => r.map(csvEscape).join(',')).join('\n');
+	const csv = HEADER.join(',') + '\n' + lines.map((r) => r.map(csvEscape).join(',')).join('\n');
 	fs.writeFileSync(path.join(dataDir, `hsk${level}.csv`), csv);
 	const words = lines.map((r) => r[1]);
 	console.log(
