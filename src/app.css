@@ -1,10 +1,20 @@
 @import 'tailwindcss';
 
-/* ---------- pinned search bar ---------- */
-/* The site header (var --hdr-h) and the pinned search bar (var --search-h)
-   are sticky; keep the table header row stuck just below both of them. */
+/* ---------- table header styling ---------- */
 #view-table thead th {
-	top: calc(var(--hdr-h, 0px) + var(--search-h, 0px));
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+/* ---------- PWA & Mobile layout enhancements ---------- */
+html {
+	-webkit-tap-highlight-color: transparent;
+	overscroll-behavior-y: contain;
+}
+
+body {
+	padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 /* ---------- view switching ---------- */

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#991b1b"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background Card -->
+  <rect width="512" height="512" rx="128" fill="url(#bg)"/>
+
+  <!-- Inner Golden Border Ring -->
+  <rect x="24" y="24" width="464" height="464" rx="108" fill="none" stroke="url(#gold)" stroke-width="6" opacity="0.4"/>
+
+  <!-- Book / Knowledge Icon Base -->
+  <g filter="url(#shadow)">
+    <!-- Chinese character '汉' (Han) in calligraphy style -->
+    <path d="M190 170 C190 170 160 210 145 235 C138 247 148 255 160 248 C185 232 215 205 225 185 Z" fill="url(#gold)"/>
+    <path d="M140 280 C140 280 165 305 180 325 C188 335 200 330 200 318 C200 295 180 270 160 260 Z" fill="url(#gold)"/>
+    <path d="M135 405 C155 390 185 360 210 330 C218 320 228 328 222 338 C200 375 165 425 140 435 Z" fill="url(#gold)"/>
+
+    <!-- Right radical '又' -->
+    <path d="M255 210 L370 210 C385 210 395 220 385 235 L330 310 C320 325 330 340 345 350 L395 385 C410 395 400 415 380 415 C360 415 320 375 300 350 L275 385 C265 400 250 405 240 390 C230 375 240 360 250 345 L285 300 L250 300 C235 300 230 285 240 275 L285 240 L250 240 C235 240 235 210 255 210 Z" fill="url(#gold)"/>
+  </g>
+
+  <!-- Small Lao Badge Text -->
+  <rect x="156" y="420" width="200" height="48" rx="24" fill="#fbbf24"/>
+  <text x="256" y="452" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="bold" fill="#7f1d1d" text-anchor="middle">HSK ລາວ</text>
+</svg>
