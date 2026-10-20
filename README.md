@@ -37,6 +37,20 @@ To create a production version of your app:
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
-
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+
+## 🚀 Cloudflare Pages Deployment
+
+### 1. ຜ່ານ Cloudflare Dashboard (ແນະນຳ):
+- **Framework preset**: `SvelteKit` ຫຼື `None`
+- **Build command**: `npm run build`
+- **Build output directory**: `build`
+- **Environment variables**:
+  - `NODE_VERSION`: `22` (ໂຄງການມີ `.node-version` ແລະ `.nvmrc` ຮອງຮັບ Node 22 ແລ້ວ)
+
+### 2. ຜ່ານ Cloudflare Wrangler CLI:
+```sh
+npm run build
+npm run deploy:cf
+```
+

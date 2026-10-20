@@ -1,0 +1,48 @@
+# Cloudflare Pages Caching, Security & HTTP/3 Headers
+
+# Global rules for all routes
+/*
+  # HTTP/3 (QUIC) advertisement header for browsers (Chrome, Edge, Safari, Firefox)
+  Alt-Svc: h3=":443"; ma=86400
+  # Enforce HTTPS across all subdomains
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# Immutable hashed JS and CSS assets (never change, cache for 1 year)
+/_app/immutable/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+  Alt-Svc: h3=":443"; ma=86400
+
+# HSK vocabulary JSON data (cache for 1 day, background revalidate)
+/data/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+  Access-Control-Allow-Origin: *
+  Alt-Svc: h3=":443"; ma=86400
+
+/vocab*.json
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+  Access-Control-Allow-Origin: *
+  Alt-Svc: h3=":443"; ma=86400
+
+# Static icons and Web App Manifest
+/*.svg
+  Cache-Control: public, max-age=604800
+  Alt-Svc: h3=":443"; ma=86400
+
+/manifest.webmanifest
+  Cache-Control: public, max-age=86400
+  Content-Type: application/manifest+json
+  Alt-Svc: h3=":443"; ma=86400
+
+# Service Worker - ALWAYS revalidate to allow seamless app updates
+/service-worker.js
+  Cache-Control: public, max-age=0, must-revalidate
+  Alt-Svc: h3=":443"; ma=86400
+
+# HTML documents
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+  Alt-Svc: h3=":443"; ma=86400

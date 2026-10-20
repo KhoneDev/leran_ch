@@ -8,12 +8,17 @@
 		"dev": "vite dev",
 		"prebuild": "node scripts/build-vocab.mjs",
 		"build": "vite build",
+		"postbuild": "node scripts/postbuild.mjs",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"deploy:cf": "npx wrangler pages deploy build"
+	},
+	"engines": {
+		"node": ">=20.19.0"
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",

@@ -67,7 +67,7 @@
 	}
 
 	onMount(() => {
-		// Gently prefetch only HSK 2 after 6s idle time; other levels load on-demand when clicked
+		// Gently prefetch HSK 2 and search index after 2.5s idle time for instant search response
 		const prefetchTimer = setTimeout(async () => {
 			if (!extraLevels[2]) {
 				try {
@@ -77,7 +77,8 @@
 					/* ignore prefetch failure */
 				}
 			}
-		}, 6000);
+			ensureIndex();
+		}, 2500);
 
 		// PWA install prompt listener
 		const handleBeforeInstall = (e: Event) => {
@@ -264,17 +265,47 @@
 	}
 
 	const MAX_ROWS = 300;
+	const CHUNK_SIZE = 40;
+	let visibleCount = $state(CHUNK_SIZE);
+
+	// Reset pagination on level change or search query change
+	$effect(() => {
+		void currentLevel;
+		void searchQuery;
+		visibleCount = CHUNK_SIZE;
+	});
+
 	const tableRows = $derived.by(() => {
 		const q = searchQuery.trim();
 		if (!q) return byLevel.slice(0, MAX_ROWS);
 		return searchResults ?? [];
 	});
 
+	const displayedRows = $derived(tableRows.slice(0, visibleCount));
+
 	const totalMatches = $derived.by(() => {
 		const q = searchQuery.trim();
 		if (!q) return byLevel.length;
 		return searchTotal;
 	});
+
+	function sentinelAction(node: HTMLElement) {
+		if (typeof IntersectionObserver === 'undefined') return;
+		const observer = new IntersectionObserver(
+			(entries) => {
+				if (entries[0]?.isIntersecting) {
+					visibleCount = Math.min(visibleCount + CHUNK_SIZE, tableRows.length);
+				}
+			},
+			{ rootMargin: '400px' }
+		);
+		observer.observe(node);
+		return {
+			destroy() {
+				observer.disconnect();
+			}
+		};
+	}
 
 	// ---------- flashcards ----------
 	let flashOrder = $state<VocabItem[]>([]);
@@ -635,6 +666,8 @@
 					placeholder="ຄົ້ນຫາ: ຄຳສັບຈີນ / ພິນອິນ / ຄວາມໝາຍ ເຊັ່ນ 爱, ài, ຮັກ"
 					class="w-full px-4 py-2.5 rounded-lg border-2 border-orange-200 bg-white text-base focus:border-red-700 focus:outline-none"
 					bind:value={query}
+					onfocus={() => ensureIndex()}
+					onmouseenter={() => ensureIndex()}
 				/>
 				<div class="result-count text-sm text-slate-500 mt-1.5">
 					{#if searchQuery.trim() && (indexLoading || searchPending)}
@@ -662,7 +695,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							{#each tableRows as v (v.level + '-' + v.no + '-' + v.word)}
+							{#each displayedRows as v (v.level + '-' + v.no + '-' + v.word)}
 								<!-- ================= MOBILE PHONE VIEW (< sm) ================= -->
 								<tr class="sm:hidden border-b border-orange-100 hover:bg-orange-50/50">
 									<td colspan="5" class="p-3">
@@ -809,6 +842,23 @@
 						</tbody>
 					</table>
 				</div>
+				{#if visibleCount < tableRows.length}
+					<div
+						use:sentinelAction
+						class="py-4 px-2 text-center border-t border-orange-100 bg-orange-50/50 flex flex-col items-center justify-center gap-1.5"
+					>
+						<button
+							type="button"
+							class="px-5 py-2 rounded-xl bg-white hover:bg-orange-100 border border-orange-200 text-slate-700 text-xs sm:text-sm font-semibold shadow-2xs transition-colors cursor-pointer"
+							onclick={() => {
+								visibleCount = Math.min(visibleCount + CHUNK_SIZE, tableRows.length);
+							}}
+						>
+							⬇ ໂຫຼດເພີ່ມເຕີມ ({visibleCount} / {tableRows.length} ຄຳ)
+						</button>
+						<span class="text-[11px] text-slate-400">ເລື່ອນລົງເພື່ອໂຫຼດອັດຕະໂນມັດ</span>
+					</div>
+				{/if}
 			</div>
 		</section>
 	{:else if view === 'flash'}

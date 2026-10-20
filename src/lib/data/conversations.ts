@@ -384,5 +384,294 @@ export const CONVERSATIONS: ConversationItem[] = [
 			{ word: '感冒', pinyin: 'gǎnmào', lao: 'ເປັນຫວັດ' },
 			{ word: '休息', pinyin: 'xiūxi', lao: 'ພັກຜ່ອນ' }
 		]
+	},
+	{
+		id: 'conv-7',
+		titleCn: '谈论喜欢的颜色与挑选衣服',
+		titlePinyin: 'Tánlùn xǐhuan de yánsè yǔ tiāoxuǎn yīfu',
+		titleLao: 'ສົນທະນາກ່ຽວກັບສີທີ່ມັກ ແລະ ການເລືອກສີເສື້ອ',
+		level: 1,
+		category: 'ສີ',
+		description: 'ບົດສົນທະນາຖາມ-ຕອບເລື່ອງສີທີ່ມັກ, ການເລືອກສີເສື້ອຜ້າ ເຊັ່ນ ສີແດງ, ສີຂາວ, ສີດຳ, ສີຟ້າ, ສີເຫຼືອງ',
+		lines: [
+			{
+				speaker: 'A',
+				speakerName: '小李 (Xiao Li)',
+				avatar: '👩',
+				cn: '你最喜欢什么颜色？',
+				pinyin: 'Nǐ zuì xǐhuan shénme yánsè?',
+				lao: 'ເຈົ້າມັກສີຫຍັງທີ່ສຸດ?'
+			},
+			{
+				speaker: 'B',
+				speakerName: '小王 (Xiao Wang)',
+				avatar: '👨',
+				cn: '我最喜欢蓝色和白色。你呢？',
+				pinyin: 'Wǒ zuì xǐhuan lánsè hé báisè. Nǐ ne?',
+				lao: 'ຂ້ອຍມັກສີຟ້າ ແລະ ສີຂາວທີ່ສຸດ. ເຈົ້າເດ?'
+			},
+			{
+				speaker: 'A',
+				speakerName: '小李 (Xiao Li)',
+				avatar: '👩',
+				cn: '我喜欢红色，因为红色很吉利。看，那件绿色的外套好看吗？',
+				pinyin: 'Wǒ xǐhuan hóngsè, yīnwèi hóngsè hěn jílì. Kàn, nà jiàn lǜsè de wàitào hǎokàn ma?',
+				lao: 'ຂ້ອຍມັກສີແດງ, ຍ້ອນວ່າສີແດງເປັນສີມຸງຄຸນ. ເບິ່ງແມ໋, ເສື້ອກັນໜາວສີຂຽວໂຕນັ້ນງາມບໍ່?'
+			},
+			{
+				speaker: 'B',
+				speakerName: '小王 (Xiao Wang)',
+				avatar: '👨',
+				cn: '挺好看的，不过我觉得黄色的衬衫更适合你。',
+				pinyin: 'Tǐng hǎokàn de, búguò wǒ juéde huángsè de chènshān gèng shìhé nǐ.',
+				lao: 'ງາມດີໃດ໋, ແຕ່ຂ້ອຍຄິດວ່າເສື້ອເຊີດສີເຫຼືອງເໝາະກັບເຈົ້າຫຼາຍກວ່າ.'
+			},
+			{
+				speaker: 'A',
+				speakerName: '小李 (Xiao Li)',
+				avatar: '👩',
+				cn: '真的吗？那我再试试这条黑色的裤子。',
+				pinyin: 'Zhēn de ma? Nà wǒ zài shìshi zhè tiáo hēisè de kùzi.',
+				lao: 'ແທ້ຫວາ? ຊັ້ນຂ້ອຍລອງໂສ້ງສີດຳໂຕນີ້ເບິ່ງອີກແດ່.'
+			},
+			{
+				speaker: 'B',
+				speakerName: '小王 (Xiao Wang)',
+				avatar: '👨',
+				cn: '黑色很百搭，穿起来显得很酷！',
+				pinyin: 'Hēisè hěn bǎidā, chuān qǐlái xiǎnde hěn kù!',
+				lao: 'ສີດຳເຂົ້າກັບທຸກສີໄດ້ງ່າຍ, ນຸ່ງແລ້ວເທ່ຫຼາຍ!'
+			}
+		],
+		vocab: [
+			{ word: '颜色', pinyin: 'yánsè', lao: 'ສີ / ສີສັນ' },
+			{ word: '红色', pinyin: 'hóngsè', lao: 'ສີແດງ' },
+			{ word: '蓝色', pinyin: 'lánsè', lao: 'ສີຟ້າ / ສີຄາມ' },
+			{ word: '白色', pinyin: 'báisè', lao: 'ສີຂາວ' },
+			{ word: '黑色', pinyin: 'hēisè', lao: 'ສີດຳ' },
+			{ word: '绿色', pinyin: 'lǜsè', lao: 'ສີຂຽວ' },
+			{ word: '黄色', pinyin: 'huángsè', lao: 'ສີເຫຼືອງ' }
+		]
+	},
+	{
+		id: 'conv-8',
+		titleCn: '学习数数与大数字计算',
+		titlePinyin: 'Xuéxí shǔshù yǔ dà shùzì jìsuàn',
+		titleLao: 'ການນັບເລກ ແລະ ຕົວເລກໃຫຍ່ຮອດຫຼັກລ້ານ',
+		level: 2,
+		category: 'ນັບເລກຮອດລ້ານ',
+		description: 'ບົດສົນທະນາຮຽນນັບຕົວເລກໃຫຍ່: ຫຼັກຮ້ອຍ (百), ຫຼັກພັນ (千), ຫຼັກໝື່ນ (万), ຫຼັກແສນ (十万), ຫຼັກລ້ານ (百万) ແລະ ຈຳນວນເງິນ',
+		lines: [
+			{
+				speaker: 'A',
+				speakerName: '留学生 (ນັກສຶກສາ)',
+				avatar: '👨‍🎓',
+				cn: '老师，中文里的大数字怎么数呢？比如一万是多少？',
+				pinyin: 'Lǎoshī, zhōngwén lǐ de dà shùzì zěnme shǔ ne? Bǐrú yí wàn shì duōshao?',
+				lao: 'ອາຈານ, ຕົວເລກໃຫຍ່ໃນພາສາຈີນນັບແນວໃດ? ຕົວຢ່າງວ່າ 1 ໝື່ນ (一万) ແມ່ນເທົ່າໃດ?'
+			},
+			{
+				speaker: 'B',
+				speakerName: '老师 (ອາຈານ)',
+				avatar: '👩‍🏫',
+				cn: '一万就是一千的十倍，也就是 10,000。中文习惯每四个零进一位。',
+				pinyin: 'Yí wàn jiù shì yì qiān de shí bèi, yě jiù shì 10,000. Zhōngwén xíguàn měi sì gè líng jìn yí wèi.',
+				lao: '1 ໝື່ນ (一万) ກໍຄື 10 ເທົ່າຂອງ 1 ພັນ, ເທົ່າກັບ 10,000. ພາສາຈີນມັກນັບທຸກໆເລກສູນ 4 ໂຕເປັນ 1 ຫຼັກ.'
+			},
+			{
+				speaker: 'A',
+				speakerName: '留学生 (ນັກສຶກສາ)',
+				avatar: '👨‍🎓',
+				cn: '原来是这样！那十万和一百万怎么说？',
+				pinyin: 'Yuánlái shì zhèyàng! Nà shí wàn hé yì bǎi wàn zěnme shuō?',
+				lao: 'ອໍ ເປັນແນວນີ້ເອງ! ແລ້ວ 1 ແສນ (十万) ກັບ 1 ລ້ານ (一百万) ເດ ເວົ້າແນວໃດ?'
+			},
+			{
+				speaker: 'B',
+				speakerName: '老师 (ອາຈານ)',
+				avatar: '👩‍🏫',
+				cn: '十个一万是十万 (100,000)，一百个一万就是一百万 (1,000,000)。',
+				pinyin: 'Shí gè yí wàn shì shí wàn (100,000), yì bǎi gè yí wàn jiù shì yì bǎi wàn (1,000,000).',
+				lao: '10 ເທື່ອຂອງ 1 ໝື່ນ ແມ່ນ 10 ໝື່ນ ຫຼື 1 ແສນ (十万: 100,000), ແລະ 100 ເທື່ອຂອງ 1 ໝື່ນ ກໍແມ່ນ 100 ໝື່ນ ຫຼື 1 ລ້ານ (一百万: 1,000,000).'
+			},
+			{
+				speaker: 'A',
+				speakerName: '留学生 (ນັກສຶກສາ)',
+				avatar: '👨‍🎓',
+				cn: '这辆汽车的价格大概是多少钱？',
+				pinyin: 'Zhè liàng qìchē de jiàgé dàgài shì duōshao qián?',
+				lao: 'ລົດໃຫຍ່ຄັນນີ້ລາຄາປະມານເທົ່າໃດ?'
+			},
+			{
+				speaker: 'B',
+				speakerName: '老师 (ອາຈານ)',
+				avatar: '👩‍🏫',
+				cn: '这辆车要二十五万八千元 (258,000元)，换算成老挝基普大约是八亿多基普。',
+				pinyin: 'Zhè liàng chē yào èrshíwǔ wàn bā qiān yuán, huànsuàn chéng lǎowō jīpǔ dàyuē shì bā yì duō jīpǔ.',
+				lao: 'ລົດຄັນນີ້ລາຄາ 258,000 ຢວນ (25 ໝື່ນ 8 ພັນ), ຄິດໄລ່ເປັນເງິນກີບລາວປະມານ 800 ກວ່າລ້ານກີບ (八亿多).'
+			}
+		],
+		vocab: [
+			{ word: '百', pinyin: 'bǎi', lao: 'ຮ້ອຍ (100)' },
+			{ word: '千', pinyin: 'qiān', lao: 'ພັນ (1,000)' },
+			{ word: '万', pinyin: 'wàn', lao: 'ໝື່ນ (10,000)' },
+			{ word: '十万', pinyin: 'shí wàn', lao: 'ແສນ / ສິບໝື່ນ (100,000)' },
+			{ word: '百万', pinyin: 'bǎi wàn', lao: 'ລ້ານ / ຮ້ອຍໝື່ນ (1,000,000)' },
+			{ word: '千万', pinyin: 'qiān wàn', lao: 'ສິບລ້ານ (10,000,000)' },
+			{ word: '亿', pinyin: 'yì', lao: 'ຮ້ອຍລ້ານ (100,000,000)' }
+		]
+	},
+	{
+		id: 'conv-9',
+		titleCn: '收发快递与包裹查询',
+		titlePinyin: 'Shōufā kuàidì yǔ bāoguǒ cháxún',
+		titleLao: 'ການຮັບ-ສົ່ງພັດສະດຸດ່ວນ ແລະ ກວດສອບເລກພັດສະດຸ',
+		level: 2,
+		category: 'ການຂົນສົ່ງພັດສະດຸ',
+		description: 'ບົດສົນທະນາການຕິດຕໍ່ຮັບເຄື່ອງພັດສະດຸຈາກພະນັກງານຂົນສົ່ງ ແລະ ກວດສອບເລກຕິດຕາມພັດສະດຸ (Tracking)',
+		lines: [
+			{
+				speaker: 'A',
+				speakerName: '快递员 (ພະນັກງານສົ່ງເຄື່ອງ)',
+				avatar: '🛵',
+				cn: '喂，您好！我是顺丰快递，有您的包裹到了。',
+				pinyin: 'Wèi, nín hǎo! Wǒ shì shùnfēng kuàidì, yǒu nín de bāoguǒ dào le.',
+				lao: 'ຮາໂຫຼ, ສະບາຍດີ! ຂ້ອຍແມ່ນພະນັກງານຂົນສົ່ງ SF Express, ມີພັດສະດຸຂອງເຈົ້າມາຮອດແລ້ວ.'
+			},
+			{
+				speaker: 'B',
+				speakerName: '收件人 (ຜູ້ຮັບ)',
+				avatar: '🧑',
+				cn: '你好！我现在不在家，可以帮我放在快递柜或者物业门卫室吗？',
+				pinyin: 'Nǐ hǎo! Wǒ xiànzài bú zài jiā, kěyǐ bāng wǒ fàng zài kuàidìguì huòzhě wùyè ménwèishì ma?',
+				lao: 'ສະບາຍດີ! ຕອນນີ້ຂ້ອຍບໍ່ຢູ່ເຮືອນ, ຊ່ວຍຝາກໄວ້ຕູ້ພັດສະດຸ (Locker) ຫຼື ປ້ອມຍາມໝູ່ບ້ານໄດ້ບໍ່?'
+			},
+			{
+				speaker: 'A',
+				speakerName: '快递员 (ພະນັກງານສົ່ງເຄື່ອງ)',
+				avatar: '🛵',
+				cn: '好的，我已经放进快递柜了。取件码是 8520，请注意查收短信。',
+				pinyin: 'Hǎo de, wǒ yǐjīng fàng jìn kuàidìguì le. Qǔjiànmǎ shì 8520, qǐng zhùyì cháchōu duǎnxìn.',
+				lao: 'ໂດຍ, ຂ້ອຍເອົາໃສ່ຕູ້ພັດສະດຸໃຫ້ແລ້ວ. ລະຫັດເອົາເຄື່ອງແມ່ນ 8520, ກະລຸນາກວດເບິ່ງຂໍ້ຄວາມ SMS ເດີ້.'
+			},
+			{
+				speaker: 'B',
+				speakerName: '收件人 (ຜູ້ຮັບ)',
+				avatar: '🧑',
+				cn: '太感谢了！另外我想寄一个包裹去云南，运费怎么算？',
+				pinyin: 'Tài gǎnxiè le! Lìngwài wǒ xiǎng jì yí gè bāoguǒ qù Yúnnán, yùnfèi zěnme suàn?',
+				lao: 'ຂອບໃຈຫຼາຍໆ! ອີກຢ່າງໜຶ່ງ ຂ້ອຍຢາກສົ່ງພັດສະດຸໄປແຂວງຢູນນານ, ຄ່າຂົນສົ່ງຄິດໄລ່ແນວໃດ?'
+			},
+			{
+				speaker: 'A',
+				speakerName: '快递员 (ພະນັກງານສົ່ງເຄື່ອງ)',
+				avatar: '🛵',
+				cn: '首重一公斤十二块，续重每公斤两块。您可以在手机上下单，我会上门取件。',
+				pinyin: 'Shǒuzhòng yì gōngjīn shí\'èr kuài, xùzhòng měi gōngjīn liǎng kuài. Nín kěyǐ zài shǒujī shang xiàdān, wǒ huì shàngmén qǔjiàn.',
+				lao: 'ກິໂລທຳອິດ 12 ຢວນ, ກິໂລຖັດໄປກິໂລລະ 2 ຢວນ. ທ່ານສາມາດກົດສັ່ງໃນມືຖືໄດ້, ຂ້ອຍຈະໄປຮັບເຄື່ອງເຖິງໜ້າບ້ານ.'
+			},
+			{
+				speaker: 'B',
+				speakerName: '收件人 (ຜູ້ຮັບ)',
+				avatar: '🧑',
+				cn: '好的，快递单号在哪里可以查到物流信息呢？',
+				pinyin: 'Hǎo de, kuàidì dānhào zài nǎlǐ kěyǐ chá dào wùliú xìnxī ne?',
+				lao: 'ໂດຍ, ເລກພັດສະດຸສາມາດກວດເບິ່ງຂໍ້ມູນການຂົນສົ່ງໄດ້ຢູ່ໃສ?'
+			},
+			{
+				speaker: 'A',
+				speakerName: '快递员 (ພະນັກງານສົ່ງເຄື່ອງ)',
+				avatar: '🛵',
+				cn: '用单号在微信小程序或者官网上都可以随时查询物流状态。',
+				pinyin: 'Yòng dānhào zài wēixìn xiǎochéngxù huòzhě guānwǎng shang dōu kěyǐ suíshí cháxún wùliú zhuàngtài.',
+				lao: 'ໃຊ້ເລກພັດສະດຸກວດເຊັກຜ່ານ WeChat mini-program ຫຼື ເວັບໄຊໄດ້ຕະຫຼອດເວລາ.'
+			}
+		],
+		vocab: [
+			{ word: '快递', pinyin: 'kuàidì', lao: 'ພັດສະດຸດ່ວນ / ຂົນສົ່ງດ່ວນ' },
+			{ word: '快递员', pinyin: 'kuàidìyuán', lao: 'ພະນັກງານສົ່ງເຄື່ອງ' },
+			{ word: '包裹', pinyin: 'bāoguǒ', lao: 'ພັດສະດຸ / ຫໍ່ເຄື່ອງ' },
+			{ word: '运费', pinyin: 'yùnfèi', lao: 'ຄ່າຂົນສົ່ງ' },
+			{ word: '单号', pinyin: 'dānhào', lao: 'ເລກຕິດຕາມພັດສະດຸ (Tracking No.)' },
+			{ word: '取件码', pinyin: 'qǔjiànmǎ', lao: 'ລະຫັດຮັບເຄື່ອງ' },
+			{ word: '物流', pinyin: 'wùliú', lao: 'ລະບົບໂລຈິສຕິກ / ການຂົນສົ່ງ' }
+		]
+	},
+	{
+		id: 'conv-10',
+		titleCn: '在邮局寄信与国际包裹',
+		titlePinyin: 'Zài yóujú jìxìn yǔ guójì bāoguǒ',
+		titleLao: 'ການສົ່ງຈົດໝາຍ ແລະ ພັດສະດຸໄປຕ່າງປະເທດ ຢູ່ທີ່ໄປສະນີ',
+		level: 2,
+		category: 'ໄປສະນີ',
+		description: 'ບົດສົນທະນາຢູ່ຫ້ອງການໄປສະນີ: ການສົ່ງຈົດໝາຍ, ການຊື້ສະແຕມ ແລະ ການສົ່ງພັດສະດຸລະຫວ່າງປະເທດ',
+		lines: [
+			{
+				speaker: 'A',
+				speakerName: '寄件人 (ຜູ້ສົ່ງ)',
+				avatar: '👱‍♀️',
+				cn: '你好！我想把这个包裹寄到老挝万象，请问怎么办理？',
+				pinyin: 'Nǐ hǎo! Wǒ xiǎng bǎ zhè ge bāoguǒ jì dào Lǎowō Wànxiàng, qǐngwèn zěnme bànlǐ?',
+				lao: 'ສະບາຍດີ! ຂ້ອຍຢາກສົ່ງພັດສະດຸຫໍ່ນີ້ໄປນະຄອນຫຼວງວຽງຈັນ ປະເທດລາວ, ຂໍຖາມແດ່ຕ້ອງເຮັດແນວໃດ?'
+			},
+			{
+				speaker: 'B',
+				speakerName: '邮局职员 (ພະນັກງານໄປສະນີ)',
+				avatar: '👩‍💼',
+				cn: '您好！请先放在秤上称一下重量……正好两公斤。请填写一下国际邮件详情单。',
+				pinyin: 'Nín hǎo! Qǐng xiān fàng zài chèng shang chēng yíxià zhòngliàng…… Zhènghǎo liǎng gōngjīn. Qǐng tiánxiě yíxià guójì yóujiàn xiángqíngdān.',
+				lao: 'ສະບາຍດີ! ກະລຸນາວາງເທິງຊິງຊັ່ງນ້ຳໜັກກ່ອນ…… ພໍດີ 2 ກິໂລ. ກະລຸນາຂຽນໃບລາຍລະອຽດພັດສະດຸລະຫວ່າງປະເທດແດ່.'
+			},
+			{
+				speaker: 'A',
+				speakerName: '寄件人 (ຜູ້ສົ່ງ)',
+				avatar: '👱‍♀️',
+				cn: '请问收件人地址和邮政编码写在哪里？',
+				pinyin: 'Qǐngwèn shōujiànrén dìzhǐ hé yóuzhèng biānmǎ xiě zài nǎlǐ?',
+				lao: 'ຂໍຖາມແດ່ ທີ່ຢູ່ຜູ້ຮັບ ແລະ ລະຫັດໄປສະນີຕ້ອງຂຽນໃສ່ບ່ອນໃດ?'
+			},
+			{
+				speaker: 'B',
+				speakerName: '邮局职员 (ພະນັກງານໄປສະນີ)',
+				avatar: '👩‍💼',
+				cn: '上面写寄件人信息，下面写收件人的姓名、地址和电话。邮政编码写在右上方。',
+				pinyin: 'Shàngmiàn xiě jìjiànrén xìnxī, xiàmiàn xiě shōujiànrén de xìngmíng, dìzhǐ hé diànhuà. Yóuzhèng biānmǎ xiě zài yòushàngfāng.',
+				lao: 'ດ້ານເທິງຂຽນຂໍ້ມູນຜູ້ສົ່ງ, ດ້ານລຸ່ມຂຽນຊື່, ທີ່ຢູ່ ແລະ ເບີໂທຜູ້ຮັບ. ລະຫັດໄປສະນີຂຽນໃສ່ເບື້ອງຂວາເທິງ.'
+			},
+			{
+				speaker: 'A',
+				speakerName: '寄件人 (ຜູ້ສົ່ງ)',
+				avatar: '👱‍♀️',
+				cn: '寄航空快递大概需要几天能到？',
+				pinyin: 'Jì hángkōng kuàidì dàgài xūyào jǐ tiān néng dào?',
+				lao: 'ສົ່ງແບບທາງອາກາດ (Airmail) ປະມານຈັກມື້ຈຶ່ງຮອດ?'
+			},
+			{
+				speaker: 'B',
+				speakerName: '邮局职员 (ພະນັກງານໄປສະນີ)',
+				avatar: '👩‍💼',
+				cn: '航空件大概五到七天，陆运或者海运大概需要半个月。',
+				pinyin: 'Hángkōng jiàn dàyuē wǔ dào qī tiān, lùyùn huòzhě hǎiyùn dàgài xūyào bàn ge yuè.',
+				lao: 'ສົ່ງທາງອາກາດປະມານ 5-7 ມື້, ຖ້າສົ່ງທາງບົກ ຫຼື ທາງເຮືອ ປະມານເຄິ່ງເດືອນ.'
+			},
+			{
+				speaker: 'A',
+				speakerName: '寄件人 (ຜູ້ສົ່ງ)',
+				avatar: '👱‍♀️',
+				cn: '好的，那我选航空件。顺便再买五张纪念邮票。',
+				pinyin: 'Hǎo de, nà wǒ xuǎn hángkōng jiàn. Shùnbiàn zài mǎi wǔ zhāng jìniàn yóupiào.',
+				lao: 'ໂດຍ, ຊັ້ນຂ້ອຍເລືອກສົ່ງທາງອາກາດ. ພ້ອມດຽວກັນນັ້ນ ຂໍຊື້ສະແຕມທີ່ລະນຶກ 5 ໃບແດ່.'
+			}
+		],
+		vocab: [
+			{ word: '邮局', pinyin: 'yóujú', lao: 'ຫ້ອງການໄປສະນີ' },
+			{ word: '寄信', pinyin: 'jìxìn', lao: 'ສົ່ງຈົດໝາຍ' },
+			{ word: '包裹', pinyin: 'bāoguǒ', lao: 'ພັດສະດຸ' },
+			{ word: '重量', pinyin: 'zhòngliàng', lao: 'ນ້ຳໜັກ' },
+			{ word: '邮政编码', pinyin: 'yóuzhèng biānmǎ', lao: 'ລະຫັດໄປສະນີ (Zip code)' },
+			{ word: '地址', pinyin: 'dìzhǐ', lao: 'ທີ່ຢູ່' },
+			{ word: '航空件', pinyin: 'hángkōng jiàn', lao: 'ພັດສະດຸທາງອາກາດ' },
+			{ word: '邮票', pinyin: 'yóupiào', lao: 'ສະແຕມໄປສະນີ' }
+		]
 	}
 ];

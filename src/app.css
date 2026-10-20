@@ -7,10 +7,22 @@
 	z-index: 10;
 }
 
+/* ---------- High performance rendering optimizations ---------- */
+#view-table tbody tr {
+	content-visibility: auto;
+	contain-intrinsic-size: 0 68px;
+}
+
+.letter-section li {
+	content-visibility: auto;
+	contain-intrinsic-size: 0 54px;
+}
+
 /* ---------- PWA & Mobile layout enhancements ---------- */
 html {
 	-webkit-tap-highlight-color: transparent;
 	overscroll-behavior-y: contain;
+	scroll-behavior: smooth;
 }
 
 body {
