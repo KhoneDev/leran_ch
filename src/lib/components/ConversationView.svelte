@@ -21,7 +21,7 @@
 	let isRecording = $state(false);
 	let recordedAudioUrl = $state<string | null>(null);
 	let recordingTime = $state(0);
-	let recordInterval: NodeJS.Timeout | null = null;
+	let recordInterval: ReturnType<typeof setInterval> | null = null;
 
 	const categories = $derived([
 		'ທັງໝົດ',
